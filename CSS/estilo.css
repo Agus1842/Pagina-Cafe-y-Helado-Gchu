@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2? family=Roboto:ital,wght@0,400;1,100;1,700&display=swap');
+
+/*==========Estilos Generales============*/
+
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: .1rem solid rgba(255, 255, 255, .3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::--webkit-scrollbar {
+    width: .8rem;
+}
+
+html::--webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::--webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body {
+    background: var(--bg);
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+.heading {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 5rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover {
+    letter-spacing: .2rem;
+}
+
+
+/*============Encabezados=============*/
+
+.encabezado {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.encabezado .logo img {
+    height: 6rem;
+}
+
+.encabezado .navbar a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.encabezado .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.encabezado .iconos div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.encabezado .iconos div:hover {
+    color: var(--main-color);
+}
+
+#menu-btn {
+    display: none;
+}
+
+.encabezado .busqueda-form {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.encabezado .busqueda-form.active {
+    transform: scaleY(1);
+}
+
+.encabezado .busqueda-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.encabezado .busqueda-form label {
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.encabezado .busqueda-form label:hover {
+    color: var(--main-color);
+}
+
+.encabezado .cartera-items-contenedor {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh -9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding: 0 1.5rem;
+}
+
+.encabezado .cartera-items-contenedor.active {
+    right: 0;
+}
+
+.encabezado .cartera-items-contenedor .cartera-item {
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.encabezado .cartera-items-contenedor .cartera-item .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.encabezado .cartera-items-contenedor .cartera-item .fa-times:hover {
+    color: var(--main-color);
+}
+
+.encabezado .cartera-items-contenedor .cartera-item img {
+    height: 7rem;
+}
+
+.encabezado .cartera-items-contenedor .cartera-item .contenedor h3 {
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+
+.encabezado .cartera-items-contenedor .cartera-item .contenedor .precio {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.encabezado .cartera-items-contenedor .btn {
+    width: 100%;
+    text-align: center;
+}
+
+
+/*===========Inicio==========*/
+
+.inicio {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../img/home-img.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio .contenedor {
+    max-width: 60rem;
+}
+
+.inicio .contenedor h3 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.inicio .contenedor p {
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #eee;
+}
+
+
+/*========Animaciones===========*/
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+    .encabezado {
+        padding: 1.5rem 2rem;
+    }
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+    .encabezado .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+    .encabezado .navbar.active {
+        right: 0;
+    }
+    .encabezado .navbar a {
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+    .encabezado .busqueda-form {
+        width: 90%;
+        right: 2rem;
+    }
+    .inicio {
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+    .inicio .contenedor h3 {
+        font-size: 4.5rem;
+    }
+    .inicio .contenedor p {
+        font-size: 1.5rem;
+    }
+}
+
+
+/*===========Responsive==========*/
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
+/*=======Otra seccion==============*/
+
+.Sobre-Nosotros .hilera {
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    flex-wrap: wrap;
+}
+
+.Sobre-Nosotros .hilera .imagen {
+    flex: 1 1 45rem;
+}
+
+.Sobre-Nosotros .hilera .imagen img {
+    width: 100%;
+}
+
+.Sobre-Nosotros .hilera .contenedor {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.Sobre-Nosotros .hilera .contenedor h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.Sobre-Nosotros .hilera .contenedor p {
+    font-size: 1.6rem;
+    color: #ccc;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+
+/*=========Menu========*/
+
+.menu .caja-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .caja-contenedor .caja {
+    padding: 5rem;
+    text-align: center;
+    border: var(--border);
+}
+
+.menu .caja-contenedor .caja img {
+    height: 10rem;
+}
+
+.menu .caja-contenedor .caja h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .caja-contenedor .caja .precio {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+
+.menu .caja-contenedor .caja .precio span {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.menu .caja-contenedor .caja:hover {
+    background: #fff;
+}
+
+.menu .caja-contenedor .caja:hover>* {
+    color: var(--black);
+}
+
+
+/*=======Esta es la parte de productos*/
+
+.productos .caja-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.productos .caja-contenedor .caja {
+    text-align: center;
+    border: var(--border);
+    padding: 2rem;
+}
+
+.productos .caja-contenedor .caja .iconos a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    border: var(--border);
+    color: #fff;
+    margin: .3rem;
+}
+
+.productos .caja-contenedor .caja .iconos a:hover {
+    background: var(--main-color);
+}
+
+.productos .caja-contenedor .caja .imagen {
+    padding: 2.5rem 0;
+}
+
+.productos .caja-contenedor .caja .imagen img {
+    height: 25rem;
+}
+
+.productos .caja-contenedor .caja .contenedor h3 {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.productos .caja-contenedor .caja .contenedor .comienzo {
+    padding: 1.5rem;
+}
+
+.productos .caja-contenedor .caja .contenedor .comienzo i {
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+.productos .caja-contenedor .caja .contenedor .precio {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.productos .caja-contenedor .caja .contenedor .precio span {
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+
+/*=======Revision==========*/
+
+.review .caja-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.review .caja-contenedor .caja {
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.review .caja-contenedor .caja p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #ccc;
+    padding: 2rem 0;
+}
+
+.review .caja-contenedor .caja .user {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .caja-contenedor .caja h3 {
+    padding: 1rem;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.review .caja-contenedor .caja .comienzo i {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.contacto .hilera {
+    display: flex;
+    background: var(--black);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contacto .hilera .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contacto .hilera form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contacto .hilera form h3 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.contacto .hilera form .inputBox {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: var(--black);
+    border: var(--border);
+}
+
+.contacto .hilera form .inputBox {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: var(--bg);
+    border: var(--border);
+}
+
+.contacto .hilera form .inputBox span {
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contacto .hilera form .inputBox input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+    text-transform: none;
+    background: none;
+}
+
+.blogs .caja-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.blogs .caja-contenedor .caja {
+    border: var(--border);
+}
+
+.blogs .caja-contenedor .caja .imagen {
+    height: 25rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.blogs .caja-contenedor .caja .imagen img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blogs .caja-contenedor .caja:hover .imagen img {
+    transform: scale(1.2);
+}
+
+.blogs .caja-contenedor .caja .contenedor {
+    padding: 2rem;
+}
+
+.blogs .caja-contenedor .caja .contenedor .titulo {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.blogs .caja-contenedor .caja .contenedor .titulo:hover {
+    color: var(--main-color);
+}
+
+.blogs .caja-contenedor .caja .contenedor span {
+    color: var(--main-color);
+    display: block;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+.blogs .caja-contenedor .caja .contenedor p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #ccc;
+    padding: 1rem 0;
+}
+
+.footer {
+    background: var(--black);
+    text-align: center;
+}
+
+.footer .compartir {
+    padding: 1rem 0;
+}
+
+.footer .compartir a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--border);
+    margin: .3rem;
+    border-radius: 50%;
+}
+
+.footer .compartir a:hover {
+    background-color: var(--main-color);
+}
+
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+.footer .links a {
+    padding: .7rem 2rem;
+    color: #fff;
+    border: var(--border);
+    font-size: 2rem;
+}
+
+.footer .links a:hover {
+    background-color: var(--main-color);
+}
+
+.footer .creditos {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+
+.footer .creditos span {
+    color: var(--main-color);
+}
